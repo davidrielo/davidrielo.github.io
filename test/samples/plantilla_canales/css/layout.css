@@ -1,0 +1,106 @@
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+	
+	.container{min-height:100%;background:#ffffff;}
+	#cuerpo {height:100%;}
+	#titulo{cursor:pointer;}
+	div.mainBlock{height: 700px; position: relative;display: block;min-height:100%!important;
+		background-color: #1e93ec;
+		/*background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(30, 147, 236, 0.8)), */
+		background: url('../images/header.jpg') no-repeat scroll 0 0 #1e93ec;background-size: cover; 
+		}
+	.movable{ display:block;position: absolute; bottom: 0; left: 0;margin:30px 30px; }
+	div.block {border-top: 1px solid #eee ;border-bottom: 1px solid #eee;height:100px;cursor:pointer;}
+	div.block a{ text-decoration: none!important;line-height:100px ;vertical-align: middle;padding:0 0 0 30px;}
+	/*div.block a::after { content: url('../images/arrow.png'); content: url('../images/arrow.svg'); float:right;margin-right: 30px;}*/
+	a.arrow{  width: 20px;
+		height: 100px; 
+		/*background: url('../images/arrow.svg') no-repeat; */
+		background-image:  url('../images/arrow.png');
+		background-image:  none,url('../images/arrow.svg'), url('../images/arrow.png');
+		background-size: 20px 20px!important;
+		background-repeat: no-repeat;
+		background-position:center;  
+		float: right;
+	}
+	h4 a.arrow{  width: 20px;
+		height: 30px; 
+		/*background: url('../images/arrow.svg') no-repeat; */
+		background-image:  url('../images/arrow.png');
+		background-image:  none,url('../images/arrow.svg'), url('../images/arrow.png');
+		background-size: 20px 20px!important;
+		background-repeat: no-repeat!important;
+		background-position:center;  
+		
+	}
+
+	.clearColor{color:#ffffff;}
+	h1.clearColor{margin-top: 40px;}
+	h4.clearColor{display:inline-flex!important;}
+	a.clearColor{text-decoration: none!important;color:#ffffff!important;}
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+		
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		div.mainBlock{height: 360px}
+		.movable{display:block;position: absolute; bottom: 0; left: 0;margin:30px 30px; }
+		div.block {border-top: 1px solid #eee ;border-bottom: 1px solid #eee;height:90px;}
+		a.arrow{height:90px;background-size: 20px 20px;}
+		h4 a.arrow{background-size: 16px 16px!important;}
+	}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+		div.mainBlock{height: 250px}
+		.movable{display:block;position: absolute; bottom: 0; left: 0;margin:30px 30px; }
+		div.block {border-top: 1px solid #eee ;border-bottom: 1px solid #eee;height:70px;}
+		div.block a{line-height:70px ;vertical-align: middle;}
+		a.arrow{height:75px;}
+		h1{font-size: 30px;line-height: 30px;margin-bottom: 4px;}
+		h4{font-size: 16px;line-height: 16px;margin-bottom: 4px;}
+		h4 a.arrow{height: 15px!important;background-size: 11px 11px!important;vertical-align:bottom;}
+	}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
