@@ -79,6 +79,12 @@ gulp.task('fonts', function(cb) {
         .pipe(gulp.dest('./dist/fonts/')).on('end', cb).on('error', cb);
 });
 
+
+gulp.task('files', function(cb) {
+    gulp.src(['src/downloads/*'])
+        .pipe(gulp.dest('./dist/downloads/')).on('end', cb).on('error', cb);
+});
+
 gulp.task('php', function(cb) {
     gulp.src(['src/**/*.php'])
         .pipe(gulp.dest('./dist/')).on('end', cb).on('error', cb);
@@ -105,6 +111,7 @@ gulp.task('default', ['clean'], function () {
         'php',
         'fonts',
         'pages',
-        'images'
+        'images',
+        'files'
     );
 });
