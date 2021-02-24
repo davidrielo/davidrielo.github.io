@@ -41,7 +41,7 @@ gulp.task('styles', function () {
         //.pipe(rename('style.min.css'))
         .pipe(csso())
         // Output
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./docs/css'))
 });
 
 // Gulp task to minify JavaScript files
@@ -50,7 +50,7 @@ gulp.task('scripts', function() {
     // Minify the file
         .pipe(uglify())
         // Output
-        .pipe(gulp.dest('./dist/js'))
+        .pipe(gulp.dest('./docs/js'))
 });
 
 // Gulp task to minify HTML files
@@ -60,7 +60,7 @@ gulp.task('pages', function() {
             collapseWhitespace: true,
             removeComments: true
         }))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./docs'));
 });
 
 
@@ -71,36 +71,36 @@ gulp.task('images', function(cb) {
         //     progressive: true,
         //     interlaced: true
         // }))
-        .pipe(gulp.dest('./dist/')).on('end', cb).on('error', cb);
+        .pipe(gulp.dest('./docs/')).on('end', cb).on('error', cb);
 });
 
 gulp.task('fonts', function(cb) {
     gulp.src(['src/fonts/*'])
-        .pipe(gulp.dest('./dist/fonts/')).on('end', cb).on('error', cb);
+        .pipe(gulp.dest('./docs/fonts/')).on('end', cb).on('error', cb);
 });
 
 
 gulp.task('files', function(cb) {
     gulp.src(['src/downloads/*'])
-        .pipe(gulp.dest('./dist/downloads/')).on('end', cb).on('error', cb);
+        .pipe(gulp.dest('./docs/downloads/')).on('end', cb).on('error', cb);
 });
 
 gulp.task('php', function(cb) {
     gulp.src(['src/**/*.php'])
-        .pipe(gulp.dest('./dist/')).on('end', cb).on('error', cb);
+        .pipe(gulp.dest('./docs/')).on('end', cb).on('error', cb);
 });
 
 gulp.task('script-debug', function (cb) {
     pump([
         gulp.src('src/**/*.js'),
         uglify(),
-        gulp.dest('./dist/')
+        gulp.dest('./docs/')
     ], cb);
 });
 
 // Clean output directory
 gulp.task('clean', function () {
-    del(['dist'])
+    del(['docs'])
 });
 
 // Gulp task to minify all files
