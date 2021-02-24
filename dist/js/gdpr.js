@@ -1,0 +1,1 @@
+var width=window.innerWidth>0?window.innerWidth:screen.width,isMobile=function(i){return i<768};isMobile(width)&&$(".navbar-wrapper").hide();var notice=new SimpleGDPR({theme:"modern",animation:"slide",float:"bottom-right",link:"https://privacy.google.com/intl/en_en/businesses/processorterms/",callback:function(){notice.close(),isMobile(width)&&$(".navbar-wrapper").show()}});

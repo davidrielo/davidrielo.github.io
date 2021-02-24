@@ -1,0 +1,1 @@
+$(".navbar-wrapper").css("visibility: hidden"),$(document).ready(function(){var a=0,i=0,e=setInterval(function(){$(".loading-page .counter h1").html(i+"%"),$(".loading-page .counter hr").css("width",i+"%"),a++,i++,101==a&&(clearInterval(e),$(".loading-page").fadeOut(),$(".navbar-wrapper").css("visibility: visible"))},10)});
