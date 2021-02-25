@@ -65,7 +65,7 @@ gulp.task('pages', function() {
 
 
 gulp.task('images', function(cb) {
-    gulp.src(['src/**/*.png','src/**/*.jpg','src/**/*.gif','src/**/*.jpeg'])
+    gulp.src(['src/**/*.png','src/**/*.jpg','src/**/*.gif','src/**/*.jpeg','src/**/*.svg'])
         // .pipe(imageop({
         //     optimizationLevel: 5,
         //     progressive: true,
